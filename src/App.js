@@ -3,20 +3,27 @@ import './App.css';
 
 function App() {
   const [state,setState] = useState({name: "", radio: false});
-   function outest () {
-     setTimeout(function () {
-      console.log(a)
-     }, 0)
-   }
+  function outest () {
+    const c = 1000;
+    // var a = 3;
+  function outer() {
+    // const a = 10;
+    function inner() {
+      console.log(a, c);
+    }
+    return inner;
+  }
+  return outer;
+}
   const setValue = (e, keyName) => {
     const temp = state;
     temp[keyName] = e;
     // setState((prevState, keyName) => ({...prevState, keyName: e}));
     setState({...temp});
   }
-   outest();
-   const a = 10000;
-   console.log(0)
+  const a = 0;
+  var z = outest();
+  z()();
   return (
     <div className="App" suppressHydrationWarning={true}>
       <form action="/uuu" target="_top" method='get'>
