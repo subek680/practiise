@@ -4,16 +4,7 @@ import './App.css';
 function App() {
   const [state,setState] = useState({name: "", radio: false});
   function outest () {
-    const c = 1000;
-    // var a = 3;
-  function outer() {
-    // const a = 10;
-    function inner() {
-      console.log(a, c);
-    }
-    return inner;
-  }
-  return outer;
+    this.xyz = 'BOB'
 }
   const setValue = (e, keyName) => {
     const temp = state;
@@ -22,8 +13,9 @@ function App() {
     setState({...temp});
   }
   const a = 0;
-  var z = outest();
-  z()();
+  const z = new outest();
+  outest.prototype.age = 25;
+  console.log(z.xyz, 'jjj', z.age);
   return (
     <div className="App" suppressHydrationWarning={true}>
       <form action="/uuu" target="_top" method='get'>
