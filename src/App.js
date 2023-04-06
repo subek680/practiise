@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import styles from './App.module.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  let name = {
+    firstName: "Subek",
+    lastName: "Singh",
+  };
+  const printFullName = function (home, ghar) {
+    console.log(this.firstName + " " + this.lastName + " " + home + " " + ghar );
+  }
+  let name2 = {
+    firstName: "Harkamal",
+    lastName: "Singh",
+  };
+
+  printFullName.call(name, "buttar", "A4");  // call method
+
+  printFullName.apply(name2, ["melbourne", "A4"]);  // apply method
+
+  const method = printFullName.bind(name, "roorkee", "F-'138");  // bind method
+  method();
+
+ return <div className={styles.header}>Harry</div>
 }
 
 export default App;
