@@ -1,26 +1,22 @@
 import styles from './App.module.css';
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function App() {
-  let name = {
-    firstName: "Subek",
-    lastName: "Singh",
-  };
-  const printFullName = function (home, ghar) {
-    console.log(this.firstName + " " + this.lastName + " " + home + " " + ghar );
+  const navigate = useNavigate();
+  const [state, setState] = useState(false);
+  useEffect(() => {
+    console.log('kokokokookok')
+    setState(false);
+  }, []);
+  console.log(onClick);
+  var a;
+  a = 100;
+  function onClick() {
+    navigate('/practise');
+    setState(true)
   }
-  let name2 = {
-    firstName: "Harkamal",
-    lastName: "Singh",
-  };
-
-  printFullName.call(name, "buttar", "A4");  // call method
-
-  printFullName.apply(name2, ["melbourne", "A4"]);  // apply method
-
-  const method = printFullName.bind(name, "roorkee", "F-'138");  // bind method
-  method();
-
- return <div className={styles.header}>Harry</div>
+  return <div className={styles.header}><button onClick={onClick}>harrrg</button><div>hhhhh</div></div>
 }
 
 export default App;

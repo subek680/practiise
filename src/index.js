@@ -2,12 +2,45 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import FirstFile from './FirstFile';
 import reportWebVitals from './reportWebVitals';
+import {
+  createBrowserRouter,
+  RouterProvider,
+  useRoutes,
+  Route,
+  Routes,
+  BrowserRouter
+} from "react-router-dom";
+// import Routes from './Router';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const router =
+  createBrowserRouter(
+    [
+      {
+        path: "/",
+        element: <App />,
+      },
+      {
+        path: "/practise",
+        element: <FirstFile />,
+      },
+      {
+        path: "/jjjjjj",
+        element: <div>GPGLPGPLGLPGLPGPL</div>,
+      },
+    ]
+  );
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <RouterProvider router={router}></RouterProvider> */}
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<App />} />
+        <Route path='/practise' element={<FirstFile />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
