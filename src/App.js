@@ -19,7 +19,12 @@ function App() {
 
   const method = printFullName.bind(name, "roorkee", "F-'138");  // bind method
   method();
-
+  const a = 100;
+  {
+    const a=10;
+    console.log(a);
+  }
+  console.log(a);
  return <div className={styles.header}>Harry</div>
 }
 
