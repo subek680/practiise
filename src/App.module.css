@@ -1,3 +1,19 @@
 .header {
   font-size: large;
+  background-color: blue;
+  color: white;
+}
+.item {
+  padding: 20px;
+  cursor: pointer;
+  border-bottom: 1px;
+  border-color: white;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 20%;
+}
+.content {
+  width: 80%;
 }
