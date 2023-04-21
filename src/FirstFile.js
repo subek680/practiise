@@ -1,6 +1,7 @@
 import React, { useEffect, useState, memo } from 'react';
 import { useNavigate } from 'react-router-dom';
-const FirstFile=memo(function FirstFile(props) {
+import SecondFile from './SecondFile';
+function FirstFile(props) {
     const [state, setState] = useState(false);
     const navigate = useNavigate();
     const {onClick} = props;
@@ -9,8 +10,8 @@ const FirstFile=memo(function FirstFile(props) {
     }, [])
     console.log('plppplplp')
     return (
-        <><h1>Subek Singh</h1><button onClick={onClick}>harrr</button></>
+        <><h1>Subek Singh</h1><button onClick={onClick}>harrr</button><SecondFile /></>
     )
-})
+}
 
 export default FirstFile;
