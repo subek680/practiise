@@ -1,4 +1,5 @@
 import styles from './App.module.css';
+import FirstFile from './FirstFile';
 
 function App() {
   let name = {
@@ -25,7 +26,8 @@ function App() {
     console.log(a);
   }
   console.log(a);
- return <div className={styles.header}>Harry</div>
+
+ return <div className={styles.header}>Harry<FirstFile/></div>
 }
 
 export default App;
